@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
+    // Provider bütün verileri kapsayacak şekilde yerleştirildi
     <WeatherProvider>
       <div className="container">
         <Header />
