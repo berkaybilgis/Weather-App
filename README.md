@@ -1,3 +1,24 @@
+# Weather App
+
+![Weather](https://user-images.githubusercontent.com/99799385/232227103-deec4b22-b03e-41aa-9509-cb8ac5bc3c73.png)
+
+
+## Özellikler
+
++ Context API kullanılarak geliştirimiştir.
++ Dropdown aracılığı ile Türkiye'nin istediğiniz şehrini seçebilirsiniz.
++ Seçtiğiniz şehrin 5 günlük güncel hava durumu bilgisi görüntülenecek.
++ Görüntülenen veride o günün en yüksek ve en düşük sıcaklık değerleri bulunmaktadır.
++ Verileri temsilen o anki hava durumu değerlerine uygun olan görseller de görüntülenmektedir.
+
+## Kullanılan API'lar
+
++ 5 Day Forecast Data API openweathermap.org
+
+## Kullanılan Kütüphaneler
+
++ Axios
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -31,8 +52,3 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
