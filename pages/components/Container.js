@@ -31,31 +31,44 @@ function Container() {
 
   return (
     <div>
-      <select onChange={(e) => handleChange(e.target.value)}>
-        {data.map((item, i) => (
-          <option key={i} value={item.name}>
-            {item.name}
-          </option>
-        ))}
-      </select>
+      <div>
+        <select
+          className="dropdown"
+          onChange={(e) => handleChange(e.target.value)}
+        >
+          {data.map((item, i) => (
+            <option key={i} value={item.name}>
+              {item.name}
+            </option>
+          ))}
+        </select>
+      </div>
 
-      {dailyData &&
-        dailyData.length > 0 &&
-        tempWeather.map((item, i) => (
-          <div key={i} className="card">
-            <div className="day">{weekday[d.getDay() + i]}</div>
-            <br />
-            <img
-              className="icon"
-              src={`http://openweathermap.org/img/wn/${dailyData[item].weather[0].icon}@2x.png`}
-              alt="weather"
-            />
-            <div className="temp">
-              {Math.round(dailyData[item].main.temp_max)} C°{"         "}
-              {Math.round(dailyData[item].main.temp_min)} C°
-            </div>
+      {tempWeather.map((item, i) => (
+        <div className="card" key={i}>
+          <div className="day">{weekday[d.getDay() + i]}</div>
+          <br />
+          <img
+            className="icon"
+            src={
+              dailyData && dailyData.length > 0
+                ? `http://openweathermap.org/img/wn/${dailyData[item].weather[0].icon}@2x.png`
+                : ""
+            }
+            alt=""
+          />
+          <div className="temp">
+            {dailyData &&
+              dailyData.length > 0 &&
+              Math.round(dailyData[item].main.temp_max)}{" "}
+            C°{"         "}
+            {dailyData &&
+              dailyData.length > 0 &&
+              Math.round(dailyData[item].main.temp_min)}{" "}
+            C°
           </div>
-        ))}
+        </div>
+      ))}
     </div>
   );
 }

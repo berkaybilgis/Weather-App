@@ -30,7 +30,6 @@ export const WeatherProvider = ({ children }) => {
   }, [cityLat]);
 
   const values = { city, setCity, dailyData, setDailyData };
-  console.log(dailyData);
 
   return (
     <WeatherContext.Provider value={values}>{children}</WeatherContext.Provider>
